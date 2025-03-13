@@ -1,13 +1,23 @@
 package it.epicode.esercizio1;
 
+import lombok.Data;
+
+@Data
 public class DipendentePartTime extends Dipendente {
 
     public DipendentePartTime(int matricola, double stipendio, Dipartimento dipartimento) {
         super(matricola, stipendio, dipartimento);
+
+    }
+    private double oreLavorate;
+
+    public DipendentePartTime(int matricola, double stipendio, Dipartimento dipartimento, double oreLavorate) {
+        super(matricola, stipendio, dipartimento);
+        this.oreLavorate = oreLavorate;
     }
 
     @Override
-    void calculateSalary() {
-        System.out.println("stipendio part time 500 euro");
+    public double calculateSalary() {
+        return getStipendio() * oreLavorate;
     }
 }

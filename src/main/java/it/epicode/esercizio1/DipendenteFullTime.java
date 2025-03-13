@@ -7,7 +7,7 @@ public class DipendenteFullTime extends Dipendente {
     }
 
     @Override
-    void calculateSalary() {
-        System.out.println("stipendio full time 2000 euro");
+    public double calculateSalary() {
+        return getStipendio();
     }
 }

@@ -7,7 +7,7 @@ public class Dirigente extends Dipendente{
     }
 
     @Override
-    void calculateSalary() {
-        System.out.println("stipendio dirigente 3000 euro");
+    public double calculateSalary() {
+        return getStipendio();
     }
 }
